@@ -1,4 +1,4 @@
-This is a Next.js blog starter that is TypeScript based and includes next features:
+This is a [Next.js](https://nextjs.org/) blog starter that is TypeScript based and includes next features:
 
 - tailwindcss (with **@tailwindcss/typography**)
 - MDX support (with **@next/mdx** and **next-mdx-remote**)
