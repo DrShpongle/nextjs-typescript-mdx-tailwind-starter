@@ -50,9 +50,7 @@ const Blog: React.FC<BlogPageProps> = ({posts}) => {
 export default Blog
 
 export function getStaticProps() {
-  // TODO
-  // needed fields: ['slug', 'frontMatter']
-  const allPosts = getAllPosts(['slug', 'frontMatter', 'source'])
+  const allPosts = getAllPosts()
   return {
     props: {
       posts: allPosts.slice(0, blogConfig.postsBlogPage),

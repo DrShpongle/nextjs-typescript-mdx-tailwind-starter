@@ -16,9 +16,7 @@ export const PostPage: React.FC<PostPageProps> = ({post}) => {
 export default PostPage
 
 export const getStaticProps = async ({params}: any) => {
-  // TODO
-  // needed fields: ['source', 'frontMatter']
-  const post = getSourceBySlug(params.slug, ['slug', 'source', 'frontMatter'])
+  const post = getSourceBySlug(params.slug)
   const {source, frontMatter} = post
   const mdxSource = await serialize(source as string, {
     scope: frontMatter,
@@ -37,9 +35,7 @@ export const getStaticProps = async ({params}: any) => {
 }
 
 export const getStaticPaths = () => {
-  // TODO
-  // needed fields: ['slug']
-  const allPosts = getAllPosts(['slug', 'source', 'frontMatter'])
+  const allPosts = getAllPosts()
   const paths = allPosts.map((post) => {
     return {
       params: {slug: post.slug},
