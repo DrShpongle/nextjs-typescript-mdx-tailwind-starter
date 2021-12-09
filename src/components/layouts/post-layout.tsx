@@ -28,7 +28,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({source, frontMatter}) => {
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center w-full">
               {title && (
-                <h2 className="mx-auto text-center lg:max-w-3xl">{title}</h2>
+                <h1 className="mx-auto text-center lg:max-w-3xl">{title}</h1>
               )}
               {(date || tags) && (
                 <div className="mt-8">
@@ -46,11 +46,11 @@ const PostLayout: React.FC<PostLayoutProps> = ({source, frontMatter}) => {
                 </div>
               )}
             </div>
-            <div className="max-w-3xl mx-auto mt-10 prose md:prose-xl dark:prose-dark xl:max-w-4xl md:mt-14 lg:mt-16 xl:mt-20">
+            <div className="w-full max-w-3xl mx-auto mt-10 prose md:prose-xl dark:prose-dark xl:max-w-4xl md:mt-14 lg:mt-16 xl:mt-20">
               <MDXRemote {...source} components={components} />
             </div>
             <button
-              className="px-6 py-3 mt-12 duration-100 md:mt-16 lg:mt-20 xl:mt-24 bg-blue-500 rounded-xl hover:bg-blue-700 hover:cursor-pointer"
+              className="px-6 py-3 mt-12 duration-100 bg-blue-500 md:mt-16 lg:mt-20 xl:mt-24 rounded-xl hover:bg-blue-700 hover:cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
                 router.push('/blog')

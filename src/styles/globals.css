@@ -6,27 +6,19 @@
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-semibold;
+  h4 {
+    @apply font-bold;
   }
   h1 {
-    @apply text-4xl md:text-5xl xl:text-6xl leading-tight;
+    @apply text-4xl md:text-[3.5rem] leading-none md:leading-none;
   }
   h2 {
-    @apply text-3xl md:text-4xl xl:text-5xl leading-tight;
+    @apply text-2xl md:text-4xl leading-[1.333] md:leading-[1.111];
   }
   h3 {
-    @apply text-2xl md:text-3xl xl:text-4xl leading-tight;
+    @apply text-xl md:text-3xl leading-[1.6] md:leading-[1.333];
   }
   h4 {
-    @apply text-xl md:text-2xl xl:text-3xl leading-tight;
-  }
-  h5 {
-    @apply text-base leading-tight;
-  }
-  h6 {
-    @apply text-xs leading-tight;
+    @apply text-base md:text-xl leading-[1.5] md:leading-[1.6];
   }
 }
