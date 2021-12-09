@@ -22,7 +22,7 @@ const Blog: React.FC<BlogPageProps> = ({posts}) => {
       <div className="container">
         {!isEmpty(posts) ? (
           <>
-            <h2 className="mt-16">Recent posts:</h2>
+            <h2>Recent posts:</h2>
             <ul className="mt-8 space-y-6">
               {posts.map((post: any) => {
                 return <PostCard post={post} key={post.slug} />
