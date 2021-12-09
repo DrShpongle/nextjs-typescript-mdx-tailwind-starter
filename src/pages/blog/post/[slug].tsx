@@ -23,6 +23,7 @@ export const getStaticProps = async ({params}: any) => {
   const mdxSource = await serialize(source as string, {
     scope: frontMatter,
     mdxOptions: {
+      remarkPlugins: [require('remark-prism')],
       rehypePlugins: [rehypeAccessibleEmojis],
     },
   })

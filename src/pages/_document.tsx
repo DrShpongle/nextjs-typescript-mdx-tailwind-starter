@@ -24,7 +24,11 @@ class MyDocument extends Document {
             cross-origin="true"
           />
           <link
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+          />
+          <link
+            href="https://unpkg.com/prism-theme-night-owl@1.4.0/build/style.css"
             rel="stylesheet"
           />
         </Head>
