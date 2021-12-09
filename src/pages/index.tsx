@@ -18,16 +18,20 @@ const Home: NextPage = () => {
           <span className="font-bold">
             nextjs-typescript-mdx-tailwind-starter
           </span>{' '}
-          that is TypeScript based and includes next features:
+          that is <span className="font-bold">TypeScript</span> based and
+          includes next features:
         </p>
         <ul className="max-w-sm mt-12 space-y-3 list-disc">
           <li>
-            <a className="text-blue-500" href="https://tailwindcss.com/docs">
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://tailwindcss.com/docs"
+            >
               tailwindcss
             </a>{' '}
             (with{' '}
             <a
-              className="text-blue-500"
+              className="text-blue-500 hover:underline"
               href="https://github.com/tailwindlabs/tailwindcss-typography"
             >
               @tailwindcss/typography
@@ -37,21 +41,21 @@ const Home: NextPage = () => {
           <li>
             <span className="font-bold">MDX</span> support (with{' '}
             <a
-              className="text-blue-500"
+              className="text-blue-500 hover:underline"
               href="https://github.com/vercel/next.js/tree/canary/packages/next-mdx"
             >
               @next/mdx
             </a>{' '}
             and{' '}
             <a
-              className="text-blue-500"
+              className="text-blue-500 hover:underline"
               href="https://github.com/hashicorp/next-mdx-remote"
             >
               next-mdx-remote
             </a>{' '}
             and <span className="font-bold">frontmatter</span> support with{' '}
             <a
-              className="text-blue-500"
+              className="text-blue-500 hover:underline"
               href="https://github.com/jonschlinkert/gray-matter"
             >
               gray-matter
@@ -69,7 +73,7 @@ const Home: NextPage = () => {
         <p className="mt-20">
           You can check it out on{' '}
           <a
-            className="text-blue-500"
+            className="text-blue-500 hover:underline"
             href="https://github.com/DrShpongle/nextjs-typescript-mdx-tailwind-starter"
           >
             GitHub
