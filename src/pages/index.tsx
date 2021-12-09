@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <h2>Hi!</h2>
         <p>
           It's another one{' '}
-          <span className="font-medium">
+          <span className="font-bold">
             nextjs-typescript-mdx-tailwind-starter
           </span>
         </p>
