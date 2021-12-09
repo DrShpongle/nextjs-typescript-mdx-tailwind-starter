@@ -52,7 +52,7 @@ export default PostPage
 export const getStaticProps = async ({params}: any) => {
   const {paginated} = params
   const paginationNumber = toNumber(paginated)
-  const allPosts = getAllPosts(['slug', 'source', 'frontMatter'])
+  const allPosts = getAllPosts()
 
   const startIndex =
     paginationNumber * blogConfig.postsPerPage - blogConfig.postsPerPage
@@ -71,9 +71,7 @@ export const getStaticProps = async ({params}: any) => {
 }
 
 export const getStaticPaths = () => {
-  // TODO
-  // needed fields: ['slug']
-  const allPosts = getAllPosts(['slug', 'source', 'frontMatter'])
+  const allPosts = getAllPosts()
   const paths = allPosts.map((_, index) => {
     return {
       params: {paginated: `${index + 1}`},
