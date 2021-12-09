@@ -36,7 +36,7 @@ export const PostCard: React.FC<PostCardProps> = ({post}) => {
         </h3>
         <div className="flex-grow">
           {excerpt && (
-            <div className="text-black dark:text-black">{excerpt}</div>
+            <div className="text-white dark:text-black">{excerpt}</div>
           )}
         </div>
 
