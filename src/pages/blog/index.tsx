@@ -22,11 +22,6 @@ const Blog: React.FC<BlogPageProps> = ({posts}) => {
       <div className="container">
         {!isEmpty(posts) ? (
           <>
-            <div className="text-center">
-              <div className="text-2xl">
-                You can read some of my thoughts here:
-              </div>
-            </div>
             <h2 className="mt-16">Recent posts:</h2>
             <ul className="mt-8 space-y-6">
               {posts.map((post: any) => {
