@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 const bodyFontFamily = '"Poppins", sans-serif'
 
@@ -10,6 +11,9 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    colors: {
+      ...colors,
+    },
     fontFamily: {
       body: bodyFontFamily,
     },
@@ -23,25 +27,25 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: defaultTheme.colors.black,
+            color: theme('colors.black'),
             a: {
-              color: defaultTheme.colors.blue['500'],
+              color: theme('colors.blue.500'),
             },
           },
         },
         dark: {
           css: {
-            color: defaultTheme.colors.white,
+            color: theme('colors.white'),
             'h1, h2, h3, h4, h5, h6': {
-              color: defaultTheme.colors.white,
+              color: theme('colors.white'),
+            },
+            'blockquote, strong': {
+              color: theme('colors.white'),
             },
           },
         },
       }),
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require('@tailwindcss/typography')],
 }
