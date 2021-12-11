@@ -5,9 +5,9 @@ import classNames from 'classnames'
 
 const DarkModeToggler = () => {
   const [mounted, setMounted] = React.useState(false)
-  const {theme, setTheme} = useTheme()
+  const {resolvedTheme, setTheme} = useTheme()
   const handleClick = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    const nextTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
     setTheme(nextTheme)
   }
   React.useEffect(() => {
@@ -17,7 +17,7 @@ const DarkModeToggler = () => {
     <div className="flex-shrink-0">
       <div className="w-16 h-10">
         <div
-          className="w-full h-full p-1 bg-opacity-50 rounded-full dark:bg-opacity-50 dark:bg-white bg-black"
+          className="w-full h-full p-1 bg-black bg-opacity-50 rounded-full dark:bg-opacity-50 dark:bg-white"
           onClick={handleClick}
           aria-label="Toggle Dark Mode"
           role="button"
@@ -25,7 +25,7 @@ const DarkModeToggler = () => {
           {mounted && (
             <motion.div
               variants={{
-                hidden: {x: theme === 'dark' ? '24px' : 0},
+                initial: {x: resolvedTheme === 'dark' ? '24px' : 0},
                 light: {
                   x: 0,
                   opacity: 1,
@@ -35,9 +35,9 @@ const DarkModeToggler = () => {
                   opacity: 1,
                 },
               }}
-              animate={theme === 'dark' ? 'dark' : 'light'}
-              initial="hidden"
-              className="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white dark:bg-black"
+              animate={resolvedTheme === 'dark' ? 'dark' : 'light'}
+              initial="initial"
+              className="flex items-center justify-center w-8 h-8 bg-white rounded-full shadow-md dark:bg-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const DarkModeToggler = () => {
                   mounted ? 'opacity-100' : 'opacity-0',
                 )}
               >
-                {theme === 'dark' ? (
+                {resolvedTheme === 'dark' ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
