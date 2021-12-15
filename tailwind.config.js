@@ -1,13 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 const bodyFontFamily = '"Poppins", sans-serif'
 
 module.exports = {
-  mode: 'jit',
-  purge: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx, mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx, mdx}',
   ],
   darkMode: 'class',
   theme: {
