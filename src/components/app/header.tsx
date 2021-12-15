@@ -1,7 +1,6 @@
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import classNames from 'classnames'
-import Image from 'next/image'
 
 import DarkModeToggler from 'components/dark-mode-toggler'
 
@@ -17,8 +16,8 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <a className="relative block">
-              <Image src="/vercel.svg" alt="logo" width={141} height={32} />
+            <a className="relative block text-2xl font-bold md:text-3xl lg:text-4xl">
+              Logo
             </a>
           </Link>
           <div className="flex items-center space-x-8">

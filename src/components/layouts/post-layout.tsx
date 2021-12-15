@@ -50,7 +50,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({source, frontMatter}) => {
               <MDXRemote {...source} components={components} />
             </div>
             <button
-              className="px-6 py-3 mt-12 duration-100 bg-blue-500 md:mt-16 lg:mt-20 xl:mt-24 rounded-xl hover:bg-blue-700 hover:cursor-pointer"
+              className="px-6 py-3 mt-12 text-white duration-100 bg-blue-500 md:mt-16 lg:mt-20 xl:mt-24 rounded-xl hover:bg-blue-700 hover:cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
                 router.push('/blog')
