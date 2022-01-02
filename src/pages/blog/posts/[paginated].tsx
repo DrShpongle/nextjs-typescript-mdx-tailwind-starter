@@ -29,15 +29,19 @@ export const PostPage: React.FC<PostPageProps> = ({
         <div className="flex justify-between mt-10">
           <div>
             {prevPosts !== null && (
-              <Link href={'/blog/posts/' + prevPosts} passHref>
-                <a>&#8592; newer posts</a>
+              <Link href={'/blog/posts/' + prevPosts}>
+                <a className="px-4 py-2 bg-gray-200 rounded-md">
+                  &#8592; newer posts
+                </a>
               </Link>
             )}
           </div>
           <div>
             {nextPosts !== null && (
-              <Link href={'/blog/posts/' + nextPosts} passHref>
-                <a>older posts &#8594;</a>
+              <Link href={'/blog/posts/' + nextPosts}>
+                <a className="px-4 py-2 bg-gray-200 rounded-md">
+                  older posts &#8594;
+                </a>
               </Link>
             )}
           </div>

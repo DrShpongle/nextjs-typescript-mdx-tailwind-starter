@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {useRouter} from 'next/router'
+import Link from 'next/link'
 import {MdxComponent} from 'components/mdx'
 import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote'
 
@@ -18,7 +18,6 @@ type PostLayoutProps = {
 }
 
 const PostLayout: React.FC<PostLayoutProps> = ({source, frontMatter}) => {
-  const router = useRouter()
   const {title, excerpt, date, tags = [], postImage} = frontMatter
   return (
     <div className="flex flex-col min-h-screen">
@@ -49,7 +48,12 @@ const PostLayout: React.FC<PostLayoutProps> = ({source, frontMatter}) => {
             <div className="w-full max-w-3xl mx-auto mt-10 prose md:prose-xl dark:prose-dark xl:max-w-4xl md:mt-14 lg:mt-16 xl:mt-20">
               <MDXRemote {...source} components={components} />
             </div>
-            <button
+            <Link href="/blog">
+              <a className="px-6 py-3 mt-12 text-white duration-100 bg-blue-500 md:mt-16 lg:mt-20 xl:mt-24 rounded-xl hover:bg-blue-700 hover:cursor-pointer">
+                Back to Posts
+              </a>
+            </Link>
+            {/* <button
               className="px-6 py-3 mt-12 text-white duration-100 bg-blue-500 md:mt-16 lg:mt-20 xl:mt-24 rounded-xl hover:bg-blue-700 hover:cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
@@ -57,7 +61,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({source, frontMatter}) => {
               }}
             >
               Back to Posts
-            </button>
+            </button> */}
           </div>
         </div>
       </main>

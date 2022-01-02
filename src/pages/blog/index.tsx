@@ -28,9 +28,11 @@ const Blog: React.FC<BlogPageProps> = ({posts}) => {
                 return <PostCard post={post} key={post.slug} />
               })}
             </ul>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-16">
               <Link href="/blog/posts/1">
-                <a>View all posts</a>
+                <a className="px-6 py-3 text-white duration-100 bg-blue-500 rounded-lg hover:bg-blue-700 hover:cursor-pointer">
+                  View all posts
+                </a>
               </Link>
             </div>
           </>
